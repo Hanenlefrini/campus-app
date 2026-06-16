@@ -4,6 +4,7 @@ on:
   push:
     branches: [ "main" ]
 
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,3 +21,4 @@ jobs:
 
       - name: Build backend
         run: mvn -f backend/pom.xml clean package -DskipTests
+     
